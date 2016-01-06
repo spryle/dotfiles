@@ -17,3 +17,7 @@ sudo apt-get install moka-icon-theme
 sudo apt-get install arc-theme
 
 rm -rf ~/Downloads/tmp/gtk
+
+mkdir -p ~/.fonts
+cp -v .fonts/* ~/.fonts
+fc-cache -vf ~/.fonts

@@ -3,10 +3,8 @@ cd "${BASH_SOURCE%/*}"
 
 echo '[setup] i3';
 
-mkdir -p ~/.fonts/
 mkdir -p ~/.bin/
 mkdir -p ~/.i3/
 
-cp -v .fonts/* ~/.fonts
 cp -v .bin/* ~/.bin
 cp -v .i3/* ~/.i3

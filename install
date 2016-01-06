@@ -1,6 +1,9 @@
 #!/bin/bash
 cd "${BASH_SOURCE%/*}"
 
+sudo apt-get update
+
+bash git/install
 bash bash/install
 bash bashmarks/install
 bash compton/install
