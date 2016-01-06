@@ -1,0 +1,24 @@
+[user]
+	name = James Spry-Leverton
+	email = james@spry-leverton.com
+[color]
+	ui = true
+[core]
+	editor = vim
+[push]
+	default = current
+[pull]
+    default = simple    
+[alias]
+    conf = config --global -e 
+    up = !git pull --rebase --prune $@ && git submodule update --init --recursive
+    cm = !git add -A && git commit -m
+    cob = checkout -b
+    co = checkout
+    undo = reset HEAD~1 --mixed
+    amend = commit -a --amend
+    save = !git add -A && git commit -m 'SAVEPOINT'
+    bclean = "!f() { git branch --merged ${1-develop} | grep -v " ${1-develop}$" | xargs -r git branch -d; }; f"
+    bdone = "!f() { git checkout ${1-develop} && git up && git bclean ${1-develop}; }; f"
+    show-remote = branch -v -a
+
