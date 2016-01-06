@@ -1,0 +1,11 @@
+#!/bin/bash
+cd "${BASH_SOURCE%/*}"
+
+echo '[setup] gtk';
+
+mkdir -p ~/.fonts/
+mkdir -p ~/.config/gtk-3.0/
+
+cp -v .fonts/* ~/.fonts
+cp -v .config/gtk-3.0/* ~/.config/gtk-3.0
+cp -v .gtkrc-2.0 ~/.gtkrc-2.0

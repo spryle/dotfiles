@@ -1,0 +1,2 @@
+#!/bin/bash
+google-chrome --app=https://slack.com/signin --user-data-dir=/home/jsl/.config/google-chrome-slack

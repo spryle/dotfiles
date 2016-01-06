@@ -1,0 +1,15 @@
+#!/bin/bash
+cd "${BASH_SOURCE%/*}"
+
+bash bash/install
+bash bashmarks/install
+bash compton/install
+bash feh/install
+bash gtk/install
+bash i3/install
+bash i3blocks/install
+bash powerline/install
+bash vim/install
+bash X/install
+bash xfce4/install
+bash rofi/install

@@ -1,0 +1,6 @@
+#!/bin/bash
+cd "${BASH_SOURCE%/*}"
+
+echo '[setup] compton';
+
+cp -v .compton.conf ~/.compton.conf

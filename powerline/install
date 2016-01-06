@@ -1,0 +1,14 @@
+#!/bin/bash
+cd "${BASH_SOURCE%/*}"
+
+echo '[install] powerline';
+
+pip install powerline-status --user
+
+wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf -P ~/.config/fontconfig/conf.d/
+wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf -P ~/.fonts/
+
+git clone https://github.com/powerline/fonts ~/Downloads/powerline-fonts
+sh ~/Downloads/powerline-fonts/install.sh
+
+fc-cache -vf ~/.fonts/

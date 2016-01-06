@@ -1,0 +1,6 @@
+#!/bin/bash
+cd "${BASH_SOURCE%/*}"
+
+echo '[install] feh'
+
+sudo apt-get install feh

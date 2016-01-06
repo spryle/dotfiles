@@ -1,0 +1,9 @@
+#!/bin/bash
+cd "${BASH_SOURCE%/*}"
+
+echo '[setup] i3blocks';
+
+mkdir -p ~/.bin/
+
+cp -v .bin/* ~/.bin
+cp -v .i3blocks.conf ~/.i3blocks.conf

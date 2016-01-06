@@ -1,0 +1,11 @@
+#!/bin/bash
+cd "${BASH_SOURCE%/*}"
+
+echo '[install] vim';
+
+# Install vim
+sudo apt-get install vim
+
+# Install vundle &  plugins
+rm ~/.vim/bundle/Vundle -rf
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle

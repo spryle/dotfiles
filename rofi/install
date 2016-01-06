@@ -1,0 +1,15 @@
+#!/bin/bash
+cd "${BASH_SOURCE%/*}"
+
+echo '[install] rofi';
+
+rm ~/Downloads/tmp/rofi -rf
+mkdir ~/Downloads/tmp/rofi -p
+cd ~/Downloads/tmp/rofi
+wget https://github.com/DaveDavenport/rofi/releases/download/0.15.12/rofi-0.15.12.tar.gz
+tar xvzf rofi-0.15.12.tar.gz
+cd rofi-0.15.12
+sh configure
+make
+sudo make install
+rm ~/Downloads/tmp/rofi -rf

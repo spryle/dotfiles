@@ -1,0 +1,15 @@
+#!/bin/bash
+cd "${BASH_SOURCE%/*}" || exit
+
+bash bash/setup
+bash bashmarks/setup
+bash compton/setup
+bash feh/setup
+bash gtk/setup
+bash i3/setup
+bash i3blocks/setup
+bash powerline/setup
+bash vim/setup
+bash X/setup
+bash xfce4/setup
+bash rofi/setup

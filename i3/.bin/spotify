@@ -1,0 +1,2 @@
+#!/bin/bash
+google-chrome --app=https://play.spotify.com/ --user-data-dir=/home/jsl/.config/google-chrome-spotify

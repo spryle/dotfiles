@@ -1,0 +1,15 @@
+# [https://i3wm.org/docs/userguide.html](i3wm)
+
+## Setup
+
+### Adding i3 to the autostart
+
+Now open the xfce settings manager and go to session and startup.
+Switch to the Application Autostart tab and add a new Application.
+
+### Disable the existing window manager and desktop from xfce
+
+Now you have to change the restart style of 3 items. xfwm4,
+xfdesktop and xfce4-panel needed "Never" as restart style.
+After that you can quit everyone of them, just click "Quit Program"
+for xfce4-panel, xfdesktop and xfwm4.

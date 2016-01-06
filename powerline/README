@@ -1,0 +1,6 @@
+# [http://powerline.readthedocs.org/en/master/index.html](powerline)
+
+Set the terminal & make sure LANG is unicode also e.g:
+
+    export LANG=en_US.UTF-8
+    export LC_ALL=en_US.UTF-8

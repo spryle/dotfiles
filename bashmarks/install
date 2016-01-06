@@ -1,0 +1,12 @@
+#!/bin/bash
+cd "${BASH_SOURCE%/*}"
+
+echo '[install] bashmarks';
+
+rm -rf ~/Downloads/tmp/bashmarks
+mkdir ~/Downloads/tmp/bashmarks -p
+cd ~/Downloads/tmp/bashmarks
+git clone git://github.com/huyng/bashmarks.git
+cd ~/Downloads/tmp/bashmarks/bashmarks
+make install
+rm -rf ~/Downloads/tmp/bashmarks

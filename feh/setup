@@ -1,0 +1,6 @@
+#!/bin/bash
+cd "${BASH_SOURCE%/*}"
+
+echo '[setup] feh';
+
+cp -v wallpaper.png ~/wallpaper.png

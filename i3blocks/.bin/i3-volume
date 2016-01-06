@@ -1,0 +1,10 @@
+#!/bin/bash
+
+volume=$(volume get volume);
+muted=$(volume get mute);
+
+if [ "$muted" == "yes" ]; then
+  echo '0'
+else
+  echo $volume
+fi

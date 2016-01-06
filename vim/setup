@@ -1,0 +1,12 @@
+#!/bin/bash
+cd "${BASH_SOURCE%/*}"
+
+echo '[setup] vim';
+
+mkdir -p ~/.vim
+mkdir -p ~/.vim/colors
+
+cp -v .vimrc ~/.vimrc
+cp -v .vim/colors/* ~/.vim/colors
+
+vim +PluginInstall +qall

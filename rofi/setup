@@ -1,0 +1,8 @@
+#!/bin/bash
+cd "${BASH_SOURCE%/*}"
+
+echo '[setup] rofi';
+
+mkdir -p ~/.bin
+
+cp -v .bin/* ~/.bin

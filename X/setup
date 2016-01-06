@@ -1,0 +1,6 @@
+#!/bin/bash
+cd "${BASH_SOURCE%/*}"
+
+echo '[setup] X';
+
+cp -v .Xresources ~/.Xresources
