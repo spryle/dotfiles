@@ -2,3 +2,5 @@
 cd "${BASH_SOURCE%/*}"
 
 echo '[install] xfce4';
+
+sudo cp -v usr/local/bin/* /usr/local/bin
