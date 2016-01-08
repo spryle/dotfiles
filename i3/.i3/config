@@ -154,11 +154,5 @@
     }
   }
 
-# Mouse tweaks
-  exec_always --no-startup-id synclient MaxTapTime=0
-  exec_always --no-startup-id synclient TapButton1=0
-  exec_always --no-startup-id synclient TapButton2=0
-  exec_always --no-startup-id synclient TapButton3=0
-
 # Start at home
   exec i3-msg workspace $workspace1;
