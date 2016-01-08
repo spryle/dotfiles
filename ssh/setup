@@ -1,11 +1,11 @@
 #!/bin/bash
 cd "${BASH_SOURCE%/*}"
 
-echo '[setup] git';
+echo '[setup] ssh';
 
 mkdir -p ~/.ssh
 mkdir -p ~/.ssh/jsl
 mkdir -p ~/.ssh/github
 mkdir -p ~/.ssh/bitbucket
 
-mv .ssh/config ~/.ssh/config
+cp -v .ssh/config ~/.ssh/config

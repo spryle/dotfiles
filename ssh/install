@@ -3,4 +3,4 @@ cd "${BASH_SOURCE%/*}"
 
 echo '[install] ssh';
 
-apt-get install openssh-client
+sudo apt-get install openssh-client
