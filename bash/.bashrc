@@ -138,3 +138,8 @@ fi
 if [ -f $HOME/.local/bin/bashmarks.sh ]; then
     source $HOME/.local/bin/bashmarks.sh
 fi
+
+# NVM
+# https://github.com/creationix/nvm
+export NVM_DIR="/home/jsl/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
