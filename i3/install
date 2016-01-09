@@ -3,7 +3,7 @@ cd "${BASH_SOURCE%/*}"
 
 echo '[install] i3';
 
-sudo apt-get install i3
+sudo apt-get install i3 pavucontrol seahorse lxappearance xfce4-terminal thunar
 
 mkdir -p ~/.fonts
 cp -v .fonts/* ~/.fonts
