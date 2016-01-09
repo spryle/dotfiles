@@ -1,0 +1,8 @@
+#!/bin/bash
+cd "${BASH_SOURCE%/*}"
+
+echo '[install] fish';
+
+sudo apt-get install fish lsof
+curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
+curl -L https://github.com/techwizrd/fishmarks/raw/master/install.fish | fish
