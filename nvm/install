@@ -1,0 +1,10 @@
+#!/bin/bash
+cd "${BASH_SOURCE%/*}"
+
+echo '[install] nvm';
+
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.30.1/install.sh | bash
+export NVM_DIR="/home/jsl/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+nvm install v5.4.0
+nvm alias default v5.4.0
