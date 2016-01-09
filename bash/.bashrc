@@ -115,14 +115,17 @@ fi
 
 PATH=$PATH:$HOME/.bin:$HOME/.local/bin
 
+export EDITOR="vim"
+export BROWSER="google-chrome"
+
 # For powerline (terminal must be unicode also)
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # HiDPI
 export QT_DEVICE_PIXEL_RATIO=2
-export GDKexport QT_DEVICE_PIXEL_RATIO=2
-export GDK_SCALE=2_SCALE=2
+export GDK_QT_DEVICE_PIXEL_RATIO=2
+export GDK_SCALE=2
 
 # Powerline
 # https://powerline.readthedocs.org/en/latest/installation.html#pip-installation
