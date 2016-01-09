@@ -7,7 +7,7 @@ MiscCursorBlinks=FALSE
 MiscCursorShape=TERMINAL_CURSOR_SHAPE_IBEAM
 MiscDefaultGeometry=80x24
 MiscInheritGeometry=FALSE
-MiscMenubarDefault=TRUE
+MiscMenubarDefault=FALSE
 MiscMouseAutohide=FALSE
 MiscToolbarDefault=FALSE
 MiscConfirmClose=TRUE
@@ -24,4 +24,5 @@ ColorCursor=#ffffffffffff
 ScrollingLines=100000
 Encoding=UTF-8
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
-
+BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
+BackgroundDarkness=0.950000

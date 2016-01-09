@@ -37,7 +37,10 @@
   font pango:System San Francisco Display 20
   floating_modifier $mod
   hide_edge_borders both
-  new_window 1pixel
+  new_window pixel1
+  floating_minimum_size 500 x 500
+  workspace_layout default
+  default_orientation vertical
 
 # Window-Related Bindings
   bindsym $mod+c kill
@@ -49,10 +52,18 @@
   bindsym $mod+Shift+j move down
   bindsym $mod+Shift+k move up
   bindsym $mod+Shift+l move right
-  bindsym $mod+t floating toggle
+  bindsym $mod+Left focus left
+  bindsym $mod+Down focus down
+  bindsym $mod+Up focus up
+  bindsym $mod+Right focus right
+  bindsym $mod+Shift+Left move left
+  bindsym $mod+Shift+Down move down
+  bindsym $mod+Shift+Up move up
+  bindsym $mod+Shift+Right move right
   bindsym --whole-window $mod+mouse2 floating toggle
-  # bindsym $mod+f fullscreen toggle
-  bindsym $mod+v layout toggle split
+  bindsym $mod+v layout toggle all
+  bindsym $mod+s layout toggle split
+  bindsym $mod+t floating toggle
 
 # Restart-Related Bindings
   bindsym $mod+Shift+c reload
@@ -61,7 +72,7 @@
 # Program-Related Bindings
   bindsym $mod+Return exec --no-startup-id ~/.bin/terminal
   bindsym $mod+p exec --no-startup-id ~/.bin/launcher
-  bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+  bindsym $mod+Shift+e i3-msg exit
 
 # Startup Programs
   exec_always --no-startup-id compton --config ~/.compton.conf
@@ -71,6 +82,7 @@
   exec ~/.bin/slack
   exec ~/.bin/hipchat
   exec ~/.bin/spotify
+  exec ~/.bin/terminal
   exec ~/.bin/terminal
 
 # Workspace-Related Bindings
