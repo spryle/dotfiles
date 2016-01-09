@@ -1,2 +1,10 @@
 #!/bin/bash
-google-chrome --app=https://play.spotify.com/ --user-data-dir=/home/jsl/.config/google-chrome-spotify
+
+url="https://play.spotify.com/"
+config="/home/jsl/.config/google-chrome-spotify"
+
+if [ "$1" = "app" ]; then
+  google-chrome --app=$url --user-data-dir=$config
+else
+  google-chrome $url --user-data-dir=$config
+fi

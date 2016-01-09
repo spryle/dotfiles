@@ -1,2 +1,10 @@
 #!/bin/bash
-google-chrome --app=https://www.hipchat.com/sign_in --user-data-dir=/home/jsl/.config/google-chrome-hipchat
+
+url="https://www.hipchat.com/sign_in"
+config="/home/jsl/.config/google-chrome-hipchat"
+
+if [ "$1" = "app" ]; then
+  google-chrome --app=$url --user-data-dir=$config
+else
+  google-chrome $url --user-data-dir=$config
+fi

@@ -79,9 +79,9 @@
   exec --no-startup-id feh --bg-scale ~/wallpaper.png
   exec atom
   exec google-chrome
-  exec ~/.bin/slack
-  exec ~/.bin/hipchat
-  exec ~/.bin/spotify
+  exec ~/.bin/slack app
+  exec ~/.bin/hipchat app
+  exec ~/.bin/spotify app
   exec ~/.bin/terminal
   exec ~/.bin/terminal
 
