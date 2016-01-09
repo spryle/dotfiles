@@ -9,3 +9,5 @@ sudo apt-get install vim
 # Install vundle &  plugins
 rm ~/.vim/bundle/Vundle -rf
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle
+ln -s ~/.vim/bundle/Vundle ~/.vim/bundle/Vundle.vim
+ln -s ~/.vim/bundle/Vundle ~/.vim/bundle/vundle
