@@ -19,6 +19,7 @@ Plugin 'hail2u/vim-css3-syntax'
 Plugin 'django.vim'
 Plugin 'python.vim'
 Plugin 'nginx.vim'
+Plugin 'mxw/vim-jsx'
 
 " Use Vim defaults (much better!)
 set nocompatible
@@ -124,10 +125,13 @@ if &t_Co > 2 || has("gui_running")
   colorscheme railscasts
 endif
 
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+
 " - syntastic
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_python_checker = "flake8"
+let g:syntastic_javascript_checkers = ['eslint']
 
 " Source a local configuration file if available
 if filereadable("~/.vimrc.local")
