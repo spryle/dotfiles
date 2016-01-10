@@ -3,4 +3,4 @@ cd "${BASH_SOURCE%/*}"
 
 echo '[setup] feh';
 
-cp -v wallpaper.png ~/wallpaper.png
+cp -v .wallpaper.png ~/.wallpaper.png

@@ -11,6 +11,8 @@ set -xU GDK_SCALE 2
 set -xU LANG en_US.UTF-8
 set -xU LC_ALL en_US.UTF-8
 
+set -xU DOCKER_HOST tcp://localhost:4243
+
 # $PATH's
 set PATH $HOME/.bin $PATH
 set PATH $HOME/.local/bin $PATH

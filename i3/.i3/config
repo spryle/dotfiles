@@ -76,9 +76,9 @@
 
 # Startup Programs
   exec_always --no-startup-id compton --config ~/.compton.conf
-  exec --no-startup-id feh --bg-scale ~/wallpaper.png
-  exec editor
-  exec browser
+  exec --no-startup-id feh --bg-scale ~/.wallpaper.png
+  exec ~/.bin/editor
+  exec ~/.bin/browser
   exec ~/.bin/slack app
   exec ~/.bin/hipchat app
   exec ~/.bin/spotify app

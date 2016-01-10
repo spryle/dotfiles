@@ -16,3 +16,5 @@ bash vim/install
 bash X/install
 bash xfce4/install
 bash rofi/install
+bash fish/install
+bash xdg/install

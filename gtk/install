@@ -3,11 +3,11 @@ cd "${BASH_SOURCE%/*}"
 
 echo '[install] gtk';
 
-rm -rf ~/Downloads/tmp/gtk
-mkdir ~/Downloads/tmp/gtk -p
-cd ~/Downloads/tmp/gtk
+rm -rf ~/tmp/gtk
+mkdir ~/tmp/gtk -p
+cd ~/tmp/gtk
 wget http://download.opensuse.org/repositories/home:Horst3180/xUbuntu_15.04/Release.key
-sudo apt-key add - < ~/Downloads/tmp/gtk/Release.key
+sudo apt-key add - < ~/tmp/gtk/Release.key
 sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_15.04/ /' >> /etc/apt/sources.list.d/arc-theme.list"
 
 sudo add-apt-repository ppa:moka/stable
@@ -16,7 +16,7 @@ sudo apt-get update
 sudo apt-get install moka-icon-theme
 sudo apt-get install arc-theme
 
-rm -rf ~/Downloads/tmp/gtk
+rm -rf ~/tmp/gtk
 
 mkdir -p ~/.fonts
 cp -v .fonts/* ~/.fonts

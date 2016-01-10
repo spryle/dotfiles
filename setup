@@ -14,3 +14,5 @@ bash vim/setup
 bash X/setup
 bash xfce4/setup
 bash rofi/setup
+bash fish/setup
+bash xdg/setup

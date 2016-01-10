@@ -8,7 +8,9 @@ pip install powerline-status --user
 wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf -P ~/.config/fontconfig/conf.d/
 wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf -P ~/.fonts/
 
-git clone https://github.com/powerline/fonts ~/Downloads/powerline-fonts
-sh ~/Downloads/powerline-fonts/install.sh
+mkdir -p ~/tmp/powerline-fonts
+git clone https://github.com/powerline/fonts ~/tmp/powerline-fonts
+sh ~/tmp/powerline-fonts/install.sh
+rm -rf ~/tmp/powerline-fonts
 
 fc-cache -vf ~/.fonts/

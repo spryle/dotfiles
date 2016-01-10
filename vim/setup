@@ -8,5 +8,3 @@ mkdir -p ~/.vim/colors
 
 cp -v .vimrc ~/.vimrc
 cp -v .vim/colors/* ~/.vim/colors
-
-vim +PluginInstall +qall

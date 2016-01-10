@@ -143,3 +143,5 @@ fi
 # https://github.com/creationix/nvm
 export NVM_DIR="/home/jsl/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export DOCKER_HOST=tcp://localhost:4243
