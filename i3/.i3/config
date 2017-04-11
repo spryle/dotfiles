@@ -1,6 +1,6 @@
 # i3 config file (v4)
 # Constants
-  set $mod Mod1
+  set $mod Mod4
 
   set $base00 #101218
   set $base01 #1f222d
@@ -22,7 +22,7 @@
   set $workspace1 "1: "
   set $workspace2 "2: "
   set $workspace3 "3: "
-  set $workspace4 "4: "
+  set $workspace4 "4: "
   set $workspace5 "5: "
   set $workspace6 "6: "
   set $workspace7 "7: "
@@ -34,7 +34,7 @@
   set $monitor1 "eDP1"
 
 # General Configuration
-  font pango:System San Francisco Display 20
+  font pango:System San Francisco Display 18
   floating_modifier $mod
   hide_edge_borders both
   new_window pixel1
@@ -64,6 +64,7 @@
   bindsym $mod+v layout toggle all
   bindsym $mod+s layout toggle split
   bindsym $mod+t floating toggle
+  bindsym $mod+m move workspace to output right
 
 # Restart-Related Bindings
   bindsym $mod+Shift+c reload
@@ -77,13 +78,8 @@
 # Startup Programs
   exec_always --no-startup-id compton --config ~/.compton.conf
   exec --no-startup-id feh --bg-scale ~/.wallpaper.png
-  exec ~/.bin/editor
+  exec ~/.bin/sublime
   exec ~/.bin/browser
-  exec ~/.bin/slack app
-  exec ~/.bin/hipchat app
-  exec ~/.bin/spotify app
-  exec ~/.bin/terminal
-  exec ~/.bin/terminal
 
 # Workspace-Related Bindings
   bindsym $mod+1 workspace $workspace1
@@ -120,11 +116,11 @@
 
 # xprop | grep WM_CLASS
 # Program Workspaces
-  assign [instance="www.hipchat.com__sign_in" class="google-chrome"] $workspace4
-  assign [instance="slack.com__signin" class="google-chrome"] $workspace5
-  assign [instance="play.spotify.com" class="google-chrome"] $workspace6
-  assign [instance="google-chrome" class="google-chrome"] $workspace3
-  assign [instance="atom" class="Atom"] $workspace2
+  assign [instance="www.hipchat.com__sign_in" class="Google-chrome"] $workspace4
+  assign [instance="slack.com__signin" class="Google-chrome"] $workspace5
+  assign [instance="play.spotify.com" class="Google-chrome"] $workspace6
+  assign [instance="google-chrome" class="Google-chrome"] $workspace3
+  assign [instance="sublime_text" class="Sublime_text"] $workspace2
 
 # Floating
   for_window [window_role="pop-up"] floating enable
@@ -137,9 +133,9 @@
   for_window [class="Seahorse"] floating enable
   for_window [class="Pavucontrol"] floating enable
   for_window [class="Thunar"] floating enable
-  for_window [instance="slack.com__signin" class="google-chrome"] floating disable
-  for_window [instance="play.spotify.com" class="google-chrome"] floating disable
-  for_window [instance="www.hipchat.com__sign_in" class="google-chrome"] floating disable
+  for_window [instance="slack.com__signin" class="Google-chrome"] floating disable
+  for_window [instance="play.spotify.com" class="Google-chrome"] floating disable
+  for_window [instance="www.hipchat.com__sign_in" class="Google-chrome"] floating disable
 
 # Widow Colours
 #
@@ -151,7 +147,7 @@
 
 # Bar
   bar {
-    font pango: System San Francisco Display, FontAwesome 24
+    font pango: System San Francisco Display, FontAwesome 18
     status_command i3blocks
     position top
     tray_output $monitor1

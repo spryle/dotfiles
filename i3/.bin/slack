@@ -1,10 +1,5 @@
 #!/bin/bash
 
 url="https://slack.com/signin"
-config="/home/jsl/.config/google-chrome-slack"
+google-chrome --app=$url &
 
-if [ "$1" = "app" ]; then
-  google-chrome --app=$url --user-data-dir=$config
-else
-  google-chrome $url --user-data-dir=$config
-fi
