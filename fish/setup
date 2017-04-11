@@ -1,8 +1,0 @@
-#!/bin/bash
-cd "${BASH_SOURCE%/*}"
-
-echo '[setup] fish';
-
-mkdir -p ~/.config/omf
-
-cp -vr .config/omf/* ~/.config/omf/
