@@ -4,3 +4,4 @@ cd "${BASH_SOURCE%/*}"
 echo '[setup] bash';
 
 cp -v .bashrc ~/.bashrc
+cp -v .profile ~/.profile

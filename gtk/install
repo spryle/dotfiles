@@ -6,9 +6,9 @@ echo '[install] gtk';
 rm -rf ~/tmp/gtk
 mkdir ~/tmp/gtk -p
 cd ~/tmp/gtk
-wget http://download.opensuse.org/repositories/home:Horst3180/xUbuntu_15.04/Release.key
+wget http://download.opensuse.org/repositories/home:Horst3180/xUbuntu_16.04/Release.key
 sudo apt-key add - < ~/tmp/gtk/Release.key
-sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_15.04/ /' >> /etc/apt/sources.list.d/arc-theme.list"
+sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_16.04/ /' >> /etc/apt/sources.list.d/arc-theme.list"
 
 sudo add-apt-repository ppa:moka/stable
 

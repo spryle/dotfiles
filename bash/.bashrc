@@ -1,3 +1,5 @@
+source ~/.profile
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -113,8 +115,6 @@ fi
 ##############################################################################
 ##############################################################################
 
-PATH=$PATH:$HOME/.bin:$HOME/.local/bin
-
 export EDITOR="vim"
 export BROWSER="google-chrome"
 
@@ -126,6 +126,8 @@ export LC_ALL=en_US.UTF-8
 export QT_DEVICE_PIXEL_RATIO=2
 export GDK_QT_DEVICE_PIXEL_RATIO=2
 export GDK_SCALE=2
+
+export LOCALDOCKER=127.0.0.1
 
 # Powerline
 # https://powerline.readthedocs.org/en/latest/installation.html#pip-installation
@@ -139,9 +141,7 @@ if [ -f $HOME/.local/bin/bashmarks.sh ]; then
     source $HOME/.local/bin/bashmarks.sh
 fi
 
-# NVM
-# https://github.com/creationix/nvm
-export NVM_DIR="/home/jsl/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+if [ -f $HOME/.local/bin/virtualenvwrapper.sh ]; then
+    source $HOME/.local/bin/virtualenvwrapper.sh
+fi
 
-export DOCKER_HOST=tcp://localhost:4243
