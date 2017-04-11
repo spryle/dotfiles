@@ -1,0 +1,8 @@
+#!/bin/bash
+cd "${BASH_SOURCE%/*}"
+
+echo '[install] Natural Scrolling';
+
+sudo add-apt-repository ppa:zedtux/naturalscrolling
+sudo apt-get update
+sudo apt-get install naturalscrolling
