@@ -22,9 +22,9 @@
   set $workspace1 "1: "
   set $workspace2 "2: "
   set $workspace3 "3: "
-  set $workspace4 "4: "
+  set $workspace4 "4: "
   set $workspace5 "5: "
-  set $workspace6 "6: "
+  set $workspace6 "6: "
   set $workspace7 "7: "
   set $workspace8 "8: "
   set $workspace9 "9: "
@@ -116,7 +116,7 @@
 
 # xprop | grep WM_CLASS
 # Program Workspaces
-  assign [instance="www.hipchat.com__sign_in" class="Google-chrome"] $workspace4
+  assign [instance="web.whatsapp.com" class="Google-chrome"] $workspace4
   assign [instance="slack.com__signin" class="Google-chrome"] $workspace5
   assign [instance="play.spotify.com" class="Google-chrome"] $workspace6
   assign [instance="google-chrome" class="Google-chrome"] $workspace3
@@ -136,6 +136,7 @@
   for_window [instance="slack.com__signin" class="Google-chrome"] floating disable
   for_window [instance="play.spotify.com" class="Google-chrome"] floating disable
   for_window [instance="www.hipchat.com__sign_in" class="Google-chrome"] floating disable
+  for_window [instance="web.whatsapp.com" class="Google-chrome"] floating disable
 
 # Widow Colours
 #
