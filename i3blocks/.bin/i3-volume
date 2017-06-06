@@ -3,8 +3,8 @@
 volume=$(amixer -D pulse get Master | grep 'Front Left' | awk '$0~/%/{print $5}' | tr -d '[]');
 muted=$(amixer -D pulse get Master | grep 'Front Left' | egrep 'Playback.*?\[o' | egrep -o '\[o.+\]');
 
-if [ "$muted" == "[on]" ]; then
-  echo '0%'
+if [ "$muted" == "[off]" ]; then
+  echo " 0%"
 else
-  echo $volume
+  echo " $volume"
 fi
