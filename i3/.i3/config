@@ -148,7 +148,7 @@
 
 # Bar
   bar {
-    font pango: System San Francisco Display, FontAwesome 18
+    font pango: System San Francisco Display, FontAwesome 14
     status_command i3blocks
     position top
     tray_output $monitor1
