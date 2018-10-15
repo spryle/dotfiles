@@ -7,3 +7,5 @@ mkdir -p ~/.config/gtk-3.0/
 
 cp -v .config/gtk-3.0/* ~/.config/gtk-3.0
 cp -v .gtkrc-2.0 ~/.gtkrc-2.0
+
+sudo cp -v etc/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf 

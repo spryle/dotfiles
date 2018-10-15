@@ -78,8 +78,10 @@
 # Startup Programs
   exec_always --no-startup-id compton --config ~/.compton.conf
   exec --no-startup-id feh --bg-scale ~/.wallpaper.png
+  exec --no-startup-id nm-applet
   exec ~/.bin/sublime
   exec ~/.bin/browser
+  exec --no-startup-id fix-scrolling
 
 # Workspace-Related Bindings
   bindsym $mod+1 workspace $workspace1
@@ -148,10 +150,10 @@
 
 # Bar
   bar {
-    font pango: System San Francisco Display, FontAwesome 14
+    font pango: System San Francisco Display, FontAwesome 11
     status_command i3blocks
     position top
-    tray_output $monitor1
+    tray_output primary
     colors {
       separator $base03
       background $base01

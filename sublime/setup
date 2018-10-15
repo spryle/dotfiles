@@ -1,0 +1,4 @@
+u#!/bin/bash
+cd "${BASH_SOURCE%/*}"
+
+echo '[install] sublime';

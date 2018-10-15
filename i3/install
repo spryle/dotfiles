@@ -3,6 +3,10 @@ cd "${BASH_SOURCE%/*}"
 
 echo '[install] i3';
 
+mkdir -p ~/.fonts
+cp -v .fonts/* ~/.fonts
+fc-cache -vf ~/.fonts
+
 rm -rf ~/tmp/i3
 mkdir ~/tmp/i3 -p
 cd ~/tmp/i3
@@ -12,7 +16,3 @@ sudo echo "deb http://debian.sur5r.net/i3/ $(grep '^DISTRIB_CODENAME=' /etc/lsb-
 sudo apt update
 
 sudo apt-get install i3 pavucontrol seahorse lxappearance xfce4-terminal thunar
-
-mkdir -p ~/.fonts
-cp -v .fonts/* ~/.fonts
-fc-cache -vf ~/.fonts

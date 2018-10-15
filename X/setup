@@ -4,3 +4,4 @@ cd "${BASH_SOURCE%/*}"
 echo '[setup] X';
 
 cp -v .Xresources ~/.Xresources
+sudo cp -v usr/share/X11/xorg.conf.d/* /usr/share/X11/xorg.conf.d/ 

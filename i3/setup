@@ -7,5 +7,6 @@ mkdir -p ~/.bin/
 mkdir -p ~/.i3/
 
 cp -v .bin/* ~/.bin
-chmod 755 ~/.bin
 cp -v .i3/* ~/.i3
+
+chmod +x ~/.bin/*

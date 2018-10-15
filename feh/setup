@@ -4,3 +4,5 @@ cd "${BASH_SOURCE%/*}"
 echo '[setup] feh';
 
 cp -v .wallpaper.png ~/.wallpaper.png
+
+sudo ln -s ~/.wallpaper.png  /usr/share/wallpapers/wallpaper.png

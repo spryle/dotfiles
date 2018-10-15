@@ -2,3 +2,5 @@
 cd "${BASH_SOURCE%/*}"
 
 echo '[install] X';
+
+sudo apt-get install xserver-xorg-input-evdev
