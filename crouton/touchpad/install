@@ -1,8 +1,0 @@
-#!/bin/bash
-cd "${BASH_SOURCE%/*}"
-
-echo '[install] xf86-input-cmt';
-
-sudo add-apt-repository ppa:hugegreenbug/cmt2
-sudo apt-get update
-sudo apt-get install libevdevc libgestures xf86-input-cmt
