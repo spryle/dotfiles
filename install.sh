@@ -15,7 +15,14 @@ fi
 
 cd "$DOTFILES_DIR"
 echo "[install] stowing packages into $HOME"
-stow --target="$HOME" --restow git bashmarks chromium hypr starship
+
+# SSH needs strict perms before stow links to it, and a sockets dir for ControlMaster.
+chmod 700 "$DOTFILES_DIR/ssh/.ssh"
+chmod 600 "$DOTFILES_DIR/ssh/.ssh/config"
+mkdir -p "$HOME/.ssh/sockets"
+chmod 700 "$HOME/.ssh" "$HOME/.ssh/sockets"
+
+stow --target="$HOME" --restow git bashmarks chromium hypr starship ssh
 
 if ! grep -qF "$BASHMARKS_MARKER" "$HOME/.bashrc"; then
     echo "[install] adding bashmarks block to ~/.bashrc"
