@@ -2,11 +2,12 @@
 set -euo pipefail
 
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-BASHMARKS_MARKER='# bashmarks (dotfiles)'
-BASHMARKS_BLOCK='# bashmarks (dotfiles)
+BASHRC_MARKER='# personal additions (dotfiles)'
+BASHRC_BLOCK='# personal additions (dotfiles)
 [ -f ~/.local/bin/bashmarks.sh ] && . ~/.local/bin/bashmarks.sh
 # Let bashmarks `g` (go) and `d` (delete) win over Omarchy'"'"'s git/docker aliases
-unalias g d 2>/dev/null'
+unalias g d 2>/dev/null
+[ -f ~/.config/bash/aliases.sh ] && . ~/.config/bash/aliases.sh'
 
 if ! command -v stow >/dev/null 2>&1; then
     echo "[install] stow not found, installing via pacman"
@@ -22,11 +23,11 @@ chmod 600 "$DOTFILES_DIR/ssh/.ssh/config"
 mkdir -p "$HOME/.ssh/sockets"
 chmod 700 "$HOME/.ssh" "$HOME/.ssh/sockets"
 
-stow --target="$HOME" --restow git bashmarks chromium hypr starship ssh
+stow --target="$HOME" --restow git bashmarks bash chromium hypr starship ssh
 
-if ! grep -qF "$BASHMARKS_MARKER" "$HOME/.bashrc"; then
-    echo "[install] adding bashmarks block to ~/.bashrc"
-    printf '\n%s\n' "$BASHMARKS_BLOCK" >> "$HOME/.bashrc"
+if ! grep -qF "$BASHRC_MARKER" "$HOME/.bashrc"; then
+    echo "[install] adding personal-additions block to ~/.bashrc"
+    printf '\n%s\n' "$BASHRC_BLOCK" >> "$HOME/.bashrc"
 fi
 
 # Symlink vendored wallpapers into each Omarchy theme's user-backgrounds folder
