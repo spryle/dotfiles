@@ -1,5 +1,0 @@
-#!/bin/bash
-
-url="https://slack.com/signin"
-google-chrome --app=$url &
-

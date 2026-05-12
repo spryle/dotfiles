@@ -1,8 +1,0 @@
-#!/bin/bash
-cd "${BASH_SOURCE%/*}"
-
-echo '[install] xfce4';
-sudo apt-get install xfce4-volumed
-sudo cp -v usr/local/bin/* /usr/local/bin
-cd /usr/local/bin
-sudo chmod 755 xflock4 

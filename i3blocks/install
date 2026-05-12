@@ -1,6 +1,0 @@
-#!/bin/bash
-cd "${BASH_SOURCE%/*}"
-
-echo '[install] i3blocks';
-
-sudo apt-get install i3blocks xbacklight

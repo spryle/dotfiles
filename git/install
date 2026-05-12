@@ -1,6 +1,0 @@
-#!/bin/bash
-cd "${BASH_SOURCE%/*}"
-
-echo '[install] git';
-
-sudo apt-get install git

@@ -1,0 +1,60 @@
+# See https://git-scm.com/docs/git-config
+
+[user]
+	name = James Spry-Leverton
+	email = james@spry-leverton.com
+
+[core]
+	editor = nvim
+
+[color]
+	ui = true
+
+[init]
+	defaultBranch = master
+
+[push]
+	default = current
+	autoSetupRemote = true        # Automatically set upstream branch on push
+
+[pull]
+	rebase = true                 # Rebase (instead of merge) on pull
+
+[diff]
+	algorithm = histogram         # Clearer diffs on moved/edited lines
+	colorMoved = plain            # Highlight moved blocks in diffs
+	mnemonicPrefix = true         # More intuitive refs in diff output
+
+[commit]
+	verbose = true                # Include diff comment in commit message template
+
+[column]
+	ui = auto                     # Output in columns when possible
+
+[branch]
+	sort = -committerdate         # Sort branches by most recent commit first
+
+[tag]
+	sort = -version:refname       # Sort version numbers as you would expect
+
+[rerere]
+	enabled = true                # Record and reuse conflict resolutions
+	autoupdate = true             # Apply stored conflict resolutions automatically
+
+[alias]
+	# Omarchy defaults
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	# Personal
+	conf = config --global -e
+	up = !git pull --rebase --prune $@ && git submodule update --init --recursive
+	cm = !git add -A && git commit -m
+	cob = checkout -b
+	undo = reset HEAD~1 --mixed
+	amend = commit -a --amend
+	save = !git add -A && git commit -m 'SAVEPOINT'
+	bclean = "!f() { git branch --merged ${1-develop} | grep -v \" ${1-develop}$\" | xargs -r git branch -d; }; f"
+	bdone = "!f() { git checkout ${1-develop} && git up && git bclean ${1-develop}; }; f"
+	show-remote = branch -v -a

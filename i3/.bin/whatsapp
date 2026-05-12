@@ -1,5 +1,0 @@
-#!/bin/bash
-
-url="https://web.whatsapp.com/"
-google-chrome --app=$url &
-

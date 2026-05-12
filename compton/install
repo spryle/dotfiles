@@ -1,6 +1,0 @@
-#!/bin/bash
-cd "${BASH_SOURCE%/*}"
-
-echo '[install] compton';
-
-sudo apt-get install compton
