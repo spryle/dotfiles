@@ -15,7 +15,7 @@ fi
 
 cd "$DOTFILES_DIR"
 echo "[install] stowing packages into $HOME"
-stow --target="$HOME" --restow git bashmarks chromium
+stow --target="$HOME" --restow git bashmarks chromium hypr starship
 
 if ! grep -qF "$BASHMARKS_MARKER" "$HOME/.bashrc"; then
     echo "[install] adding bashmarks block to ~/.bashrc"
