@@ -1,6 +1,0 @@
-#!/bin/bash
-cd "${BASH_SOURCE%/*}"
-
-echo '[install] rofi';
-
-sudo apt-get install rofi

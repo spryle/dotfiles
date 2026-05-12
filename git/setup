@@ -1,7 +1,0 @@
-#!/bin/bash
-cd "${BASH_SOURCE%/*}"
-
-echo '[setup] git';
-
-cp -v .gitconfig ~/.gitconfig
-cp -v .gitignore ~/.gitignore

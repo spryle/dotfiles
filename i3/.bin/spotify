@@ -1,6 +1,0 @@
-#!/bin/bash
-
-url="https://play.spotify.com/"
-
-google-chrome --app=$url &
-
