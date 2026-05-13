@@ -1,0 +1,19 @@
+# Razer Blade Stealth 13 (Early 2020) - RZ09-0310
+# Synaptics 06CB:CDA3 i2c-HID touchpad
+#
+# The firmware briefly reports phantom second-finger contacts (often
+# <10ms) during single-finger use, which trips libinput gesture/scroll
+# detection. Same bug class is present on Windows. The touchpad does
+# not expose pressure or contact-size axes, so the usual palm/thumb
+# threshold quirks are not applicable.
+#
+# ModelTouchpadPhantomClicks=1 enables libinput's workaround for
+# touchpads in this family (also used on Dell XPS 15 9500 and
+# LG gram 14 2023).
+
+[Razer Blade Stealth Touchpad]
+MatchBus=i2c
+MatchVendor=0x06CB
+MatchProduct=0xCDA3
+MatchUdevType=touchpad
+ModelTouchpadPhantomClicks=1
