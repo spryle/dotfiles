@@ -22,6 +22,7 @@ cd ~/Projects/dotfiles
 | `bash/` | `~/.config/bash/aliases.sh` | Personal shell aliases (`p='pnpm'`, …) |
 | `chromium/` | `~/.config/chromium-flags.conf` | Omarchy's Wayland defaults + `--disable-pinch` (seeded from `.example`, gitignored — holds local OAuth secrets) |
 | `hypr/` | `~/.config/hypr/{input,monitors,envs,bindings}.conf` | Touchpad + GB keyboard, HiDPI scale, NVIDIA env vars |
+| `omarchy/` | `~/.config/omarchy/branding/screensaver.txt` | Custom ASCII-art screensaver banner |
 | `starship/` | `~/.config/starship.toml` | Catppuccin Powerline preset |
 | `ssh/` | `~/.ssh/config` | 1Password SSH agent + ControlMaster multiplexing + named hosts |
 | `wallpapers/` | symlinked into every Omarchy theme | Personal wallpaper, joins the cycle for whichever theme is active |
