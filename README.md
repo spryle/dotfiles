@@ -21,7 +21,7 @@ cd ~/Projects/dotfiles
 | `bashmarks/` | `~/.local/bin/bashmarks.sh` | Directory bookmarks — `s name`, `g name`, `p name`, `d name`, `l` |
 | `bash/` | `~/.config/bash/aliases.sh` | Personal shell aliases (`p='pnpm'`, …) |
 | `chromium/` | `~/.config/chromium-flags.conf` | Omarchy's Wayland defaults + `--disable-pinch` (touchpad pinch-on-scroll fix) |
-| `hypr/` | `~/.config/hypr/{input,monitors,envs,bindings}.conf` | Touchpad + GB keyboard, HiDPI scale, NVIDIA env vars, `SUPER+C` close-window |
+| `hypr/` | `~/.config/hypr/{input,monitors,envs,bindings}.conf` | Touchpad + GB keyboard, HiDPI scale, NVIDIA env vars |
 | `starship/` | `~/.config/starship.toml` | Catppuccin Powerline preset |
 | `ssh/` | `~/.ssh/config` | 1Password SSH agent + ControlMaster multiplexing + named hosts |
 | `wallpapers/` | symlinked into every Omarchy theme | Personal wallpaper, joins the cycle for whichever theme is active |
