@@ -1,0 +1,3 @@
+# Local-only config seeded from a tracked .example template by install.sh.
+# Keep secrets here (e.g. --oauth2-client-secret) — never commit this file.
+chromium/.config/chromium-flags.conf

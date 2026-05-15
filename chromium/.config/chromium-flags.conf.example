@@ -1,0 +1,15 @@
+# Omarchy defaults
+--ozone-platform=wayland
+--ozone-platform-hint=wayland
+--enable-features=TouchpadOverscrollHistoryNavigation
+--load-extension=~/.local/share/omarchy/default/chromium/extensions/copy-url
+
+# Personal: disable pinch-to-zoom (touchpad triggers it on scroll)
+--disable-pinch
+
+# Personal: Google OAuth client for signed-in profile / sync.
+# Register your own at https://console.cloud.google.com/ and uncomment.
+# Do NOT commit real values — install.sh copies this template to the
+# gitignored chromium-flags.conf on first run; edit the real file locally.
+#--oauth2-client-id=YOUR_CLIENT_ID.apps.googleusercontent.com
+#--oauth2-client-secret=YOUR_CLIENT_SECRET

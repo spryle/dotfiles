@@ -23,6 +23,13 @@ chmod 600 "$DOTFILES_DIR/ssh/.ssh/config"
 mkdir -p "$HOME/.ssh/sockets"
 chmod 700 "$HOME/.ssh" "$HOME/.ssh/sockets"
 
+# chromium-flags.conf is gitignored (it holds OAuth secrets). Seed it from the
+# tracked template on first install; never overwrite a user-edited copy.
+CHROMIUM_FLAGS="$DOTFILES_DIR/chromium/.config/chromium-flags.conf"
+if [[ ! -f "$CHROMIUM_FLAGS" ]]; then
+    cp "$CHROMIUM_FLAGS.example" "$CHROMIUM_FLAGS"
+fi
+
 stow --target="$HOME" --restow git bashmarks bash chromium hypr starship ssh
 
 if ! grep -qF "$BASHRC_MARKER" "$HOME/.bashrc"; then

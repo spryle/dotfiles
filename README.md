@@ -20,7 +20,7 @@ cd ~/Projects/dotfiles
 | `git/` | `~/.config/git/{config,ignore}` | Identity + aliases, merged with Omarchy's defaults (XDG path, no `~/.gitconfig`) |
 | `bashmarks/` | `~/.local/bin/bashmarks.sh` | Directory bookmarks — `s name`, `g name`, `p name`, `d name`, `l` |
 | `bash/` | `~/.config/bash/aliases.sh` | Personal shell aliases (`p='pnpm'`, …) |
-| `chromium/` | `~/.config/chromium-flags.conf` | Omarchy's Wayland defaults + `--disable-pinch` (touchpad pinch-on-scroll fix) |
+| `chromium/` | `~/.config/chromium-flags.conf` | Omarchy's Wayland defaults + `--disable-pinch` (seeded from `.example`, gitignored — holds local OAuth secrets) |
 | `hypr/` | `~/.config/hypr/{input,monitors,envs,bindings}.conf` | Touchpad + GB keyboard, HiDPI scale, NVIDIA env vars |
 | `starship/` | `~/.config/starship.toml` | Catppuccin Powerline preset |
 | `ssh/` | `~/.ssh/config` | 1Password SSH agent + ControlMaster multiplexing + named hosts |
