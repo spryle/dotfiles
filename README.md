@@ -29,7 +29,7 @@ cd ~/Projects/dotfiles
 
 ## How it works
 
-Each top-level folder (except `wallpapers/`, `hosts/`, and `system/`) is a stow package whose internal layout mirrors `$HOME`. So `git/.config/git/config` lands at `~/.config/git/config` as a symlink back into the repo — edit either place, you're editing the same file.
+Each top-level folder (except `wallpapers/`, `hosts/`, `system/`, and `notes/`) is a stow package whose internal layout mirrors `$HOME`. So `git/.config/git/config` lands at `~/.config/git/config` as a symlink back into the repo — edit either place, you're editing the same file.
 
 `install.sh` handles the bits stow alone can't:
 
@@ -62,3 +62,9 @@ Idempotent — re-run after pulling new commits. Currently installs:
 ## Per-host notes
 
 Anything host-specific that can't live in `$HOME` (kernel command line, BIOS, hardware quirks, third-party GUI toggles) goes in `hosts/<machine>.md` as a checklist, with any tracked system files under `hosts/<machine>/etc/...`. Walk through the relevant file before running `install.sh` on a fresh box.
+
+## App setup notes
+
+`notes/` collects per-application setup gotchas that apply across hosts and aren't config files — first-run procedures, why certain choices were made, workarounds for known bugs. Skim the relevant file when installing the app on a fresh machine.
+
+- [`notes/expressvpn.md`](notes/expressvpn.md) — CLI-only setup (Qt GUI unusable on HiDPI), activation via temp file, background-mode flag.

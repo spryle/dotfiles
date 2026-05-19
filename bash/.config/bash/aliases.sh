@@ -3,3 +3,4 @@
 # expansion happens before function resolution).
 
 alias p='pnpm'
+alias vpn='expressvpnctl'    # ExpressVPN CLI; the bundled GUI is unusable on HiDPI
