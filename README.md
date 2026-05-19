@@ -29,7 +29,7 @@ cd ~/Projects/dotfiles
 
 ## How it works
 
-Each top-level folder (except `wallpapers/` and `hosts/`) is a stow package whose internal layout mirrors `$HOME`. So `git/.config/git/config` lands at `~/.config/git/config` as a symlink back into the repo — edit either place, you're editing the same file.
+Each top-level folder (except `wallpapers/`, `hosts/`, and `system/`) is a stow package whose internal layout mirrors `$HOME`. So `git/.config/git/config` lands at `~/.config/git/config` as a symlink back into the repo — edit either place, you're editing the same file.
 
 `install.sh` handles the bits stow alone can't:
 
@@ -47,6 +47,18 @@ Each top-level folder (except `wallpapers/` and `hosts/`) is a stow package whos
 
 When forking an Omarchy default, copy the current template (from `~/.local/share/omarchy/config/<app>/`) into your stow package first, then layer your changes on top.
 
+## System config (needs root)
+
+`system/` mirrors `/etc` and holds non-host-specific config that must live outside `$HOME`. The top-level `install.sh` doesn't touch `/etc` — apply these with the dedicated installer, which copies each tracked file to its mirrored `/etc` path and restarts any affected services:
+
+```bash
+./system/install.sh   # asks for sudo password once
+```
+
+Idempotent — re-run after pulling new commits. Currently installs:
+
+- `etc/systemd/resolved.conf.d/dns.conf` — route DNS through Cloudflare + Quad9 (via `Domains=~.` so it overrides DHCP-pushed resolvers on every link), bypassing ISP-level DNS filtering. See the file header for the rationale.
+
 ## Per-host notes
 
-Anything that can't live in `$HOME` (kernel command line, BIOS, hardware quirks, third-party GUI toggles) goes in `hosts/<machine>.md` as a checklist. Walk through the relevant file before running `install.sh` on a fresh box.
+Anything host-specific that can't live in `$HOME` (kernel command line, BIOS, hardware quirks, third-party GUI toggles) goes in `hosts/<machine>.md` as a checklist, with any tracked system files under `hosts/<machine>/etc/...`. Walk through the relevant file before running `install.sh` on a fresh box.
