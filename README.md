@@ -26,6 +26,7 @@ cd ~/Projects/dotfiles
 | `omarchy/` | `~/.config/omarchy/branding/screensaver.txt` | Custom ASCII-art screensaver banner |
 | `starship/` | `~/.config/starship.toml` | Catppuccin Powerline preset |
 | `ssh/` | `~/.ssh/config` | 1Password SSH agent + ControlMaster multiplexing + named hosts |
+| `waybar/` | `~/.config/waybar/config.jsonc` | Top bar: show only occupied workspaces (no persistent 1-5 placeholders) |
 | `wallpapers/` | symlinked into every Omarchy theme | Personal wallpaper, joins the cycle for whichever theme is active |
 
 ## How it works

@@ -30,7 +30,7 @@ if [[ ! -f "$CHROMIUM_FLAGS" ]]; then
     cp "$CHROMIUM_FLAGS.example" "$CHROMIUM_FLAGS"
 fi
 
-stow --target="$HOME" --restow git bashmarks bash chromium elephant hypr omarchy starship ssh
+stow --target="$HOME" --restow git bashmarks bash chromium elephant hypr omarchy starship ssh waybar
 
 if ! grep -qF "$BASHRC_MARKER" "$HOME/.bashrc"; then
     echo "[install] adding personal-additions block to ~/.bashrc"
