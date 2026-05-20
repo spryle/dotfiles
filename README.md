@@ -21,6 +21,7 @@ cd ~/Projects/dotfiles
 | `bashmarks/` | `~/.local/bin/bashmarks.sh` | Directory bookmarks — `s name`, `g name`, `p name`, `d name`, `l` |
 | `bash/` | `~/.config/bash/aliases.sh` | Personal shell aliases (`p='pnpm'`, …) |
 | `chromium/` | `~/.config/chromium-flags.conf` | Omarchy's Wayland defaults + `--disable-pinch` (seeded from `.example`, gitignored — holds local OAuth secrets) |
+| `elephant/` | `~/.config/elephant/desktopapplications.toml` | Walker app launcher: rank by recent-use (`history`/`history_when_empty`) instead of alphabetical |
 | `hypr/` | `~/.config/hypr/{input,monitors,envs,bindings}.conf` | Touchpad + GB keyboard, HiDPI scale, NVIDIA env vars |
 | `omarchy/` | `~/.config/omarchy/branding/screensaver.txt` | Custom ASCII-art screensaver banner |
 | `starship/` | `~/.config/starship.toml` | Catppuccin Powerline preset |
